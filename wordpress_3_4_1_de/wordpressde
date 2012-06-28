@@ -300,7 +300,7 @@ require_once(ABSPATH . 'wp-settings.php');
 			doSQL($sql);
 
 			## Upgrade Database to the current wordpress version ##
-			my $upgrade_wp_version = `$main::cfg{'CMD_PHP'} -n ./wp_upgrade.php '$sw_dest_path'`;
+			my $upgrade_wp_version = `$main::cfg{'CMD_PHP'} ./wp_upgrade.php '$sw_dest_path'`;
 			
 			## Don't remove this line below ##
 			imscp_installer_package_end();
